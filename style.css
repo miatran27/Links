@@ -10,35 +10,6 @@
     overflow: hidden;
 }
 
-.menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 1rem 1.5rem;
-    background-color: #ff9800;
-    z-index: 2;
-}
-
-.menulinks {
-    display: block;
-    color: #fff;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.4rem 0;
-    transition: opacity 0.2s ease;
-}
-
-.menulinks:hover {
-    opacity: 0.85;
-}
-
 .hero__center {
     position: absolute;
     top: 50%;
@@ -81,7 +52,71 @@
 }
 
 .content {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 3rem 2rem;
     background: #fff;
 }
+
+
+/* Gallery links: spread horizontally */
+.gallerylinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+}
+
+.gallery-link {
+    display: block;
+    color: #1a1a1a;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: opacity 0.2s ease;
+}
+
+.gallery-link:hover {
+    opacity: 0.7;
+}
+
+/* Galleries: hidden until targeted */
+.gallery {
+    display: none;
+    padding: 3rem 2rem;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.gallery:target {
+    display: block;
+}
+
+.gallerytitle {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery__item {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
