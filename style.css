@@ -55,6 +55,8 @@
     animation: scroll-bounce 1.4s ease-in-out infinite;
 }
 
+ /* Still need to figure out how to make the scroll icon bounce, there's something in the code that doesn't work */
+
 .content {
     /* min-height: 100vh; */
     padding: 3rem 2rem;
