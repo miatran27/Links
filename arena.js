@@ -25,43 +25,15 @@ let renderBlock = (blockData) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.querySelector('#channel-blocks')
 
-	// let imageBlocks = document.querySelector('#image-blocks')
-	// let videoBlocks = document.querySelector('#video-blocks')
-	// let textBlocks = document.querySelector('#text-blocks')
-	// let linkBlocks = document.querySelector('#link-blocks')
+	let imageBlocks = document.querySelector('#image-blocks')
+	let videoBlocks = document.querySelector('#video-blocks')
+	let textBlocks = document.querySelector('#text-blocks')
+	let linkBlocks = document.querySelector('#link-blocks')
 
 	// Links!
 	if (blockData.type == 'Link') {
 		console.log(blockData)
-		// Declares a “template literal” of the dynamic HTML we want.
-		// let linkItem =
-		// 	`
-		// 	<li>
-		// 		<p><em>Link</em></p>
-		// 		<figure>
-		// 			<picture>
-		// 				<source media="(width < 500px)" srcset="${ blockData.image.small.src_2x }">
-		// 				<source media="(width < 1000px)" srcset="${ blockData.image.medium.src_2x }">
-		// 				<img alt="${blockData.image.alt_text}" src="${ blockData.image.large.src_2x }">
-		// 			</picture>
-		// 			<figcaption>
-		// 				<h3>
-		// 					${ blockData.title
-		// 						? blockData.title // If `blockData.title` exists, do this.
-		// 						: `Untitled` // Otherwise do this.
 
-		// 						// This is a “ternary operator”: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
-		// 					}
-		// 				</h3>
-		// 				${ blockData.description // Here, checks for the object; could also write `blockData.description?.html`.
-		// 					? `<div>${blockData.description.html}</div>` // Wrap/interpolate the HTML.
-		// 					: `` // Our “otherwise” can also be blank!
-		// 				}
-		// 			</figcaption>
-		// 		</figure>
-		// 		<p><a href="${ blockData.source.url }">See the original ↗</a></p>
-		// 	</li>
-		// 	`
 		let linkItem = 
 			`
 			<li class="link-block"><a href="${ blockData.source.url }">
@@ -75,7 +47,7 @@ let renderBlock = (blockData) => {
 			`
 
 		// And puts it into the page!
-		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
+		linkBlocks.insertAdjacentHTML('beforeend', linkItem)
 
 		// More on template literals:
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
@@ -93,7 +65,7 @@ let renderBlock = (blockData) => {
 			</li>
 			`
 
-		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
+		imageBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
 
 	// Text!
@@ -107,7 +79,7 @@ let renderBlock = (blockData) => {
 				<p>${blockData.content.html}</p>
             </li>
             `
-        channelBlocks.insertAdjacentHTML('beforeend', textItem)
+        textBlocks.insertAdjacentHTML('beforeend', textItem)
 
 
 	}
@@ -121,13 +93,13 @@ let renderBlock = (blockData) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li>
+				<li class="video-block">
 					<p><em>Video</em></p>
 					<video controls src="${ blockData.attachment.url }"></video>
 				</li>
 				`
 
-			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
+			videoBlocks.insertAdjacentHTML('beforeend', videoItem)
 
 			// More on `video`, like the `autoplay` attribute:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
@@ -165,13 +137,6 @@ let renderBlock = (blockData) => {
 		if (embedType.includes('video')) {
 			// …still up to you, but here’s an example `iframe` element:
 			console.log(blockData)
-			// let linkedVideoItem =
-			// 	`
-			// 	<li>
-			// 		<h2>${blockData.title}</h2>
-			// 		<img src=${blockData.source.url}">
-			// 	</li>
-			// 	`
 			let linkedVideoItem =
 				`
 				<li class="video-block">
@@ -180,7 +145,7 @@ let renderBlock = (blockData) => {
 				</li>
 				`
 
-			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+			videoBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 
 			// More on `iframe`:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
