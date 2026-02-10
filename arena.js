@@ -25,10 +25,10 @@ let renderBlock = (blockData) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.querySelector('#channel-blocks')
 
-	let imageBlocks = document.querySelector('#image-blocks')
-	let videoBlocks = document.querySelector('#video-blocks')
-	let textBlocks = document.querySelector('#text-blocks')
-	let linkBlocks = document.querySelector('#link-blocks')
+	// let imageBlocks = document.querySelector('#image-blocks')
+	// let videoBlocks = document.querySelector('#video-blocks')
+	// let textBlocks = document.querySelector('#text-blocks')
+	// let linkBlocks = document.querySelector('#link-blocks')
 
 	// Links!
 	if (blockData.type == 'Link') {
@@ -47,7 +47,7 @@ let renderBlock = (blockData) => {
 			`
 
 		// And puts it into the page!
-		linkBlocks.insertAdjacentHTML('beforeend', linkItem)
+		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 
 		// More on template literals:
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
@@ -65,7 +65,7 @@ let renderBlock = (blockData) => {
 			</li>
 			`
 
-		imageBlocks.insertAdjacentHTML('beforeend', imageItem)
+		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
 
 	// Text!
@@ -79,7 +79,7 @@ let renderBlock = (blockData) => {
 				<p>${blockData.content.html}</p>
             </li>
             `
-        textBlocks.insertAdjacentHTML('beforeend', textItem)
+        channelBlocks.insertAdjacentHTML('beforeend', textItem)
 
 
 	}
@@ -99,7 +99,7 @@ let renderBlock = (blockData) => {
 				</li>
 				`
 
-			videoBlocks.insertAdjacentHTML('beforeend', videoItem)
+			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 
 			// More on `video`, like the `autoplay` attribute:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
@@ -145,7 +145,7 @@ let renderBlock = (blockData) => {
 				</li>
 				`
 
-			videoBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 
 			// More on `iframe`:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
