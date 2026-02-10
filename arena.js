@@ -25,6 +25,11 @@ let renderBlock = (blockData) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.querySelector('#channel-blocks')
 
+	// let imageBlocks = document.querySelector('#image-blocks')
+	// let videoBlocks = document.querySelector('#video-blocks')
+	// let textBlocks = document.querySelector('#text-blocks')
+	// let linkBlocks = document.querySelector('#link-blocks')
+
 	// Links!
 	if (blockData.type == 'Link') {
 		console.log(blockData)
