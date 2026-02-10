@@ -11,6 +11,22 @@
     color: #1a1a1a;
 }
 
+h1 {
+    z-index: 3;
+    justify-content: center;
+
+}
+
+/* Added style to make display as a grid */
+#channel-blocks{
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: var(--gap);
+	justify-content: center;
+
+	padding-top: 9px;
+}
 
 .hero {
     position: relative;
