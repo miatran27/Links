@@ -27,33 +27,45 @@ let renderBlock = (blockData) => {
 
 	// Links!
 	if (blockData.type == 'Link') {
+		console.log(blockData)
 		// Declares a “template literal” of the dynamic HTML we want.
-		let linkItem =
-			`
-			<li>
-				<p><em>Link</em></p>
-				<figure>
-					<picture>
-						<source media="(width < 500px)" srcset="${ blockData.image.small.src_2x }">
-						<source media="(width < 1000px)" srcset="${ blockData.image.medium.src_2x }">
-						<img alt="${blockData.image.alt_text}" src="${ blockData.image.large.src_2x }">
-					</picture>
-					<figcaption>
-						<h3>
-							${ blockData.title
-								? blockData.title // If `blockData.title` exists, do this.
-								: `Untitled` // Otherwise do this.
+		// let linkItem =
+		// 	`
+		// 	<li>
+		// 		<p><em>Link</em></p>
+		// 		<figure>
+		// 			<picture>
+		// 				<source media="(width < 500px)" srcset="${ blockData.image.small.src_2x }">
+		// 				<source media="(width < 1000px)" srcset="${ blockData.image.medium.src_2x }">
+		// 				<img alt="${blockData.image.alt_text}" src="${ blockData.image.large.src_2x }">
+		// 			</picture>
+		// 			<figcaption>
+		// 				<h3>
+		// 					${ blockData.title
+		// 						? blockData.title // If `blockData.title` exists, do this.
+		// 						: `Untitled` // Otherwise do this.
 
-								// This is a “ternary operator”: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
-							}
-						</h3>
-						${ blockData.description // Here, checks for the object; could also write `blockData.description?.html`.
-							? `<div>${blockData.description.html}</div>` // Wrap/interpolate the HTML.
-							: `` // Our “otherwise” can also be blank!
-						}
-					</figcaption>
-				</figure>
-				<p><a href="${ blockData.source.url }">See the original ↗</a></p>
+		// 						// This is a “ternary operator”: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+		// 					}
+		// 				</h3>
+		// 				${ blockData.description // Here, checks for the object; could also write `blockData.description?.html`.
+		// 					? `<div>${blockData.description.html}</div>` // Wrap/interpolate the HTML.
+		// 					: `` // Our “otherwise” can also be blank!
+		// 				}
+		// 			</figcaption>
+		// 		</figure>
+		// 		<p><a href="${ blockData.source.url }">See the original ↗</a></p>
+		// 	</li>
+		// 	`
+		let linkItem = 
+			`
+			<li class="link-block"><a href="${ blockData.source.url }">
+				<h2>${blockData.title}</h2>
+				<picture>
+					<source media="(max-width: 428px)" srcset="${ blockData.image.square.src }">
+					<source media="(max-width: 640px)" srcset="${ blockData.image.large.src }">
+					<img src="${ blockData.image.src }">
+				</picture></a>
 			</li>
 			`
 
@@ -67,11 +79,32 @@ let renderBlock = (blockData) => {
 	// Images!
 	else if (blockData.type == 'Image') {
 		// …up to you!
+        console.log(blockData)
+        let imageItem = 
+			`
+			<li class="image-block">
+				<h2>${blockData.title}</h2>
+    			<img src="${blockData.image.medium.src_2x}">
+			</li>
+			`
+
+		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
 
 	// Text!
 	else if (blockData.type == 'Text') {
+        console.log(blockData)
 		// …up to you!
+        let textItem =
+            `
+            <li class="text-block">
+             	<h2>${blockData.title}</h2>
+				<p>${blockData.content.html}</p>
+            </li>
+            `
+        channelBlocks.insertAdjacentHTML('beforeend', textItem)
+
+
 	}
 
 	// Uploaded (not linked) media…
@@ -120,15 +153,24 @@ let renderBlock = (blockData) => {
 
 	// Linked (embedded) media…
 	else if (blockData.type == 'Embed') {
+		console.log(blockData)
 		let embedType = blockData.embed.type
 
 		// Linked video!
 		if (embedType.includes('video')) {
 			// …still up to you, but here’s an example `iframe` element:
+			console.log(blockData)
+			// let linkedVideoItem =
+			// 	`
+			// 	<li>
+			// 		<h2>${blockData.title}</h2>
+			// 		<img src=${blockData.source.url}">
+			// 	</li>
+			// 	`
 			let linkedVideoItem =
 				`
-				<li>
-					<p><em>Linked Video</em></p>
+				<li class="video-block">
+					<h2>${blockData.title}</h2>
 					${ blockData.embed.html }
 				</li>
 				`

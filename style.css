@@ -182,4 +182,55 @@ blockquote {
 }
 
 
+/* Styling the gallery buttons */
 
+button {
+    padding: 1rem;
+    background: blue;
+    color: white;
+}
+
+/* Filtering the blocks into their respective categories */
+
+#channel-blocks {
+
+    &.show-images {
+        li {
+            display: none;
+        }
+    
+        li.image-block {
+            display: block;
+        }
+    }
+
+    &.show-videos {
+        li {
+            display: none;
+        }
+    
+        li.video-block {
+            display: block;
+        }
+    }
+
+    &.show-links {
+        li {
+            display: none;
+        }
+    
+        li.link-block {
+            display: block;
+        }
+    }
+
+    &.show-text {
+        li {
+            display: none;
+        }
+    
+        li.text-block {
+            display: block;
+        }
+    }
+}
