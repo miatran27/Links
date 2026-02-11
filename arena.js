@@ -25,6 +25,8 @@ let renderBlock = (blockData) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.querySelector('#channel-blocks')
 
+	// These ones below were added to organzie the blocks. Going to them keep hidden for now.
+
 	// let imageBlocks = document.querySelector('#image-blocks')
 	// let videoBlocks = document.querySelector('#video-blocks')
 	// let textBlocks = document.querySelector('#text-blocks')
