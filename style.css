@@ -33,16 +33,23 @@ h1 {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: #fff;
 }
 
-.herovideo {
+.arena-link {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-family: "Klima", system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.arena-link:hover {
+    opacity: 0.7;
 }
 
 .heroscroll {
