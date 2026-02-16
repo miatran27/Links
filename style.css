@@ -79,6 +79,20 @@ h1 {
     background: black;
 }
 
+/* Channel-blocks section: mobile-first (min 335px), fixed airport board background */
+
+    .channel-blocks-section {
+        position: relative;
+        min-height: 100vh;
+        padding: 1.5rem 1rem 3rem;
+        background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
 /* Blockquote style */
 
 blockquote {
@@ -225,12 +239,18 @@ button {
 }
 
 /* Styling the links button id */
-#controls{
+#controls {
 	display: flex;
+	flex-direction: column;
 	gap: 1rem;
-	padding-bottom: 1rem;
-    padding-top: 1rem;
-	justify-content: space-between;
+	padding: 0;
+	align-items: center;
+}
+
+#controls button {
+	background: transparent;
+	color: #fff;
+	border: none;
 }
 
 #channel-blocks {
@@ -273,5 +293,14 @@ button {
         li.text-block {
             display: block;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    #controls {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4rem;
     }
 }
