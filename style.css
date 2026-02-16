@@ -33,7 +33,6 @@ h1 {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    /* Remove background-color: #ffeb3b; */
 }
 
 .herovideo {
@@ -42,10 +41,9 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fills the space while maintaining aspect ratio */
+    object-fit: cover;
     z-index: 0;
 }
-
 
 .heroscroll {
     position: absolute;
@@ -71,6 +69,11 @@ h1 {
     animation: scroll-bounce 1.4s ease-in-out infinite;
 }
 
+@keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0) rotate(-45deg); }
+    50% { transform: translateY(6px) rotate(-45deg); }
+}
+
  /* Still need to figure out how to make the scroll icon bounce, there's something in the code that doesn't work */
 
 .content {
@@ -85,11 +88,26 @@ h1 {
         position: relative;
         min-height: 100vh;
         padding: 1.5rem 1rem 3rem;
-        background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .channel-blocks-section-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
+
+/* Making all the content in the chennel blocks section stay on top of the background video */
+    .channel-blocks-section #channel-description,
+    .channel-blocks-section #controls,
+    .channel-blocks-section #channel-blocks {
+        position: relative;
+        z-index: 1;
     }
 
 
@@ -247,6 +265,7 @@ button {
 	align-items: center;
 }
 
+/* Styling the links buttons inside the id */
 #controls button {
 	background: transparent;
 	color: #fff;
