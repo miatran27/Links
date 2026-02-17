@@ -228,7 +228,7 @@ h1 {
 .content {
     /* min-height: 100vh; */
     padding: 3rem 2rem;
-    background: black;
+    background: white;
 }
 
 /* Channel-blocks section: mobile-first (min 335px)*/
@@ -262,15 +262,24 @@ h1 {
 
 /* Blockquote style */
 
+.content {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers children horizontally */
+}
+
 blockquote {
     text-align: left;
     justify-content: center;
+    margin: 0 auto; /* centers the blockquote horizontally */
+    padding: 2rem; /* adds breathing room */
 }
 
 .quote, .quoteauthor {
-    color: white;
-    font-family: "Klima";
-
+    font-size: 1.2rem;
+    color: black;
+    font-family: "Inconsolata", monospace;
 }
 
 .quoteauthor {
@@ -419,8 +428,8 @@ button {
 	background: transparent;
 	color: #fff;
     font-family:"Courier Prime", monospace;
+    font-size: 1.3rem;
 	border: none;
-    text-decoration: underline;
     padding-block-end: 2rem;
 }
 
@@ -466,6 +475,16 @@ button {
         }
     }
 }
+
+footer p {
+    text-align: center;
+    font-family: "Inconsolata", monospace;
+    padding: 1rem;
+    background-color: transparent;
+    color: black;
+}
+
+
 
 @media (min-width: 768px) {
 
@@ -594,6 +613,10 @@ button {
     font-size: 2rem;
 }
 
+.quote, .quoteauthor {
+    font-size: 1.3rem;
+}
+
 #controls {
     flex-direction: row;
     justify-content: center;
@@ -601,3 +624,4 @@ button {
     gap: 10rem;
     }
 }
+
