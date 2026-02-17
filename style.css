@@ -418,7 +418,10 @@ button {
 #controls button {
 	background: transparent;
 	color: #fff;
+    font-family:"Courier Prime", monospace;
 	border: none;
+    text-decoration: underline;
+    padding-block-end: 2rem;
 }
 
 #channel-blocks {
@@ -466,34 +469,26 @@ button {
 
 @media (min-width: 768px) {
 
-
 .hero .destinations-column {
-    /* grid-area: destinations-column; */
     padding: 1rem 3rem;
     padding-block-start: 8rem;
 }
 
 .hero .status-column {
-    /* grid-area: status-column; */
-    padding: 1rem 6rem;
+    padding: 1rem 12rem;
     padding-block-start: 8rem;
 }
 
 .hero .title h1 {
-    /* grid-area: title; */
     font-weight: 700;
-    /* display: flex;
-    align-items: flex-start; */
     font-size: 4rem;
     /* padding: 1rem; */
     padding-inline-start: 3rem;
 }
 
 .hero .subheader {
-    /* grid-area: subheader;
     display: flex; */
-    /* align-items: flex-start; */
-    /* padding: 1rem; */
+    padding: 3rem;
     padding-inline-start: 3rem;
 }
 
@@ -502,49 +497,107 @@ button {
 }
 
 .hero .boarding-button {
-    /* grid-area: boarding-button; */
-    padding: 0.5rem 6rem 0.5rem;
-    /* display: flex;
-    align-items: center;
-    justify-content: flex-start; */
+    padding: 0.5rem 12rem 0.5rem;
 }
 
 .hero .arena-link-container {
-    /* grid-area: arena-link;
-    padding: 1rem; */
     font-size: 2rem;
-    /* padding: 0.5rem; */
     font-size: 2rem;
     margin-inline-start: 3rem;/* shifts the whole box to the right */
 }
 
 .hero .destinations {
-    /* grid-area: destinations; */
     padding: 1rem 3rem;
 }
 
 .hero .status {
-    /* grid-area: status; */
-    padding: 1rem 6rem;
+    padding: 1rem 12rem;
 }
 
 .hero .destinations, .hero .status {
-    /* display: flex;
-    flex-direction: column; */
     gap: 1.5rem;
 }
 
+.arena-link {
+    font-size: 2rem;
+}
+    
+#controls {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    }
+}
+
+/* .hero .status-column, .hero .boarding-button, .hero .status {
+    padding-inline-start: 12rem;
+} */
+
+@media (min-width: 1280px) {
+
+
+.hero .destinations-column {
+    padding: 1rem 6rem;
+    padding-block-start: 4rem;
+}
+
+.hero .status-column {
+    padding: 1rem;
+    padding-block-start: 4rem;
+    padding-inline-start: 22rem;
+}
+
+.hero .title h1 {
+    font-weight: 700;
+    font-size: 6rem;
+    padding-inline-start: 6rem;
+}
+
+.hero .subheader {
+    display: flex; */
+    padding: 3rem;
+    padding-inline-start: 6rem;
+    font-size: 1.5rem;
+}
+
+.destinations-column ul, .status-column ul, .destinations ul, .status ul, .boarding-button p {
+    font-size: 1.2rem;
+}
+
+.hero .boarding-button {
+    padding: 0.5rem 0.5rem;
+    padding-inline-start: 22rem;
+}
+
+.hero .arena-link-container {
+    font-size: 2rem;
+    margin-inline-start: 6rem;/* shifts the whole box to the right */
+}
+
+.hero .destinations {
+    padding: 1rem 6rem;
+    padding-block-start: 4rem;
+}
+
+.hero .status {
+    padding: 1rem;
+    padding-block-start: 4rem;
+    padding-inline-start: 22rem;
+}
+
+.hero .destinations, .hero .status {
+    gap: 1.5rem;
+}
 
 .arena-link {
     font-size: 2rem;
-    /* font-weight: 500; */
 }
-    
-    
-    #controls {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 4rem;
+
+#controls {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10rem;
     }
 }
