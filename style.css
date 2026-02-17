@@ -71,6 +71,8 @@ h1 {
     letter-spacing: 0.2em;
     text-align: center;
     color: #F1B100;
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
 }
 
 .hero .divider {
@@ -94,9 +96,11 @@ h1 {
 
 .hero .title h1 {
     grid-area: title;
+    font-family: "Inconsolata", monospace;
+    font-weight: 700;
     display: flex;
     align-items: flex-start;
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 1rem;
     color: white;
 }
@@ -137,7 +141,6 @@ h1 {
 }
 
 
-
 .hero .arena-link-container {
     grid-area: arena-link;
     padding: 1rem;
@@ -147,6 +150,11 @@ h1 {
     background: #F1B100;
     width: fit-content; /* makes it only as wide as the content */
     margin-inline-start: 1rem;/* shifts the whole box to the right */
+    transition: background 0.3s ease; 
+}
+
+.hero .arena-link-container:hover {
+    background: #00C951;
 }
 
 .hero .destinations {
