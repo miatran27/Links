@@ -28,18 +28,59 @@ h1 {
 	padding-top: 9px;
 }
 
+
 .hero {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     background: #fff;
+    display: grid;
+    grid-template-areas:
+        "header header barcode barcode"
+        "credits credits credits credits"
+        "qrcode qrcode arena-link-container arena-link-container"
+        "heroscroll heroscroll heroscroll heroscroll";
+     grid-template-columns: 3fr 1fr 1fr 1fr; /* Two equal columns */
 }
 
+/* Assign each element to its grid area */
+.hero .header { grid-area: header; }
+.hero .barcode { grid-area: barcode; }
+.hero .credits { grid-area: credits; }
+.hero .qrcode { grid-area: qrcode; }
+.hero .arena-link-container { grid-area: arena-link-container; }
+.hero .heroscroll { grid-area: heroscroll; }
+
+.header {
+    font-size: 2rem;
+}
+
+.barcode img {
+    transform: rotate(-90deg);
+    /* padding-block-start: -4rem; */
+}
+
+.barcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.credits {
+    text-align: center;
+}
+
+.arena-link-container a {
+    font-size: 2rem;
+}
+
+
 .arena-link {
-    position: absolute;
+    /* position: absolute;
     top: 1.5rem;
-    right: 1.5rem;
+    right: 1.5rem; */
     font-family: "Klima", system-ui, sans-serif;
     font-size: 1rem;
     font-weight: 500;
