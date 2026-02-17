@@ -85,13 +85,13 @@ h1 {
 .hero .destinations-column {
     grid-area: destinations-column;
     padding: 1rem 1rem;
-    padding-block-start: 8rem;
+    padding-block-start: 6rem;
 }
 
 .hero .status-column {
     grid-area: status-column;
     padding: 1rem 2rem;
-    padding-block-start: 8rem;
+    padding-block-start: 6rem;
 }
 
 .hero .title h1 {
@@ -103,6 +103,7 @@ h1 {
     font-size: 2.5rem;
     padding: 1rem;
     color: white;
+    padding-block-start: 0.2rem;
 }
 
 .hero .subheader {
@@ -175,6 +176,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding-block-start: 2rem;
 }
 
 
@@ -223,15 +225,13 @@ h1 {
     50% { transform: translateY(6px) rotate(-45deg); }
 }
 
- /* Still need to figure out how to make the scroll icon bounce, there's something in the code that doesn't work */
-
 .content {
     /* min-height: 100vh; */
     padding: 3rem 2rem;
     background: black;
 }
 
-/* Channel-blocks section: mobile-first (min 335px), fixed airport board background */
+/* Channel-blocks section: mobile-first (min 335px)*/
 
     .channel-blocks-section {
         position: relative;
@@ -465,6 +465,82 @@ button {
 }
 
 @media (min-width: 768px) {
+
+
+.hero .destinations-column {
+    /* grid-area: destinations-column; */
+    padding: 1rem 3rem;
+    padding-block-start: 8rem;
+}
+
+.hero .status-column {
+    /* grid-area: status-column; */
+    padding: 1rem 6rem;
+    padding-block-start: 8rem;
+}
+
+.hero .title h1 {
+    /* grid-area: title; */
+    font-weight: 700;
+    /* display: flex;
+    align-items: flex-start; */
+    font-size: 4rem;
+    /* padding: 1rem; */
+    padding-inline-start: 3rem;
+}
+
+.hero .subheader {
+    /* grid-area: subheader;
+    display: flex; */
+    /* align-items: flex-start; */
+    /* padding: 1rem; */
+    padding-inline-start: 3rem;
+}
+
+.destinations-column ul, .status-column ul, .destinations ul, .status ul {
+    font-size: 1rem;
+}
+
+.hero .boarding-button {
+    /* grid-area: boarding-button; */
+    padding: 0.5rem 6rem 0.5rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start; */
+}
+
+.hero .arena-link-container {
+    /* grid-area: arena-link;
+    padding: 1rem; */
+    font-size: 2rem;
+    /* padding: 0.5rem; */
+    font-size: 2rem;
+    margin-inline-start: 3rem;/* shifts the whole box to the right */
+}
+
+.hero .destinations {
+    /* grid-area: destinations; */
+    padding: 1rem 3rem;
+}
+
+.hero .status {
+    /* grid-area: status; */
+    padding: 1rem 6rem;
+}
+
+.hero .destinations, .hero .status {
+    /* display: flex;
+    flex-direction: column; */
+    gap: 1.5rem;
+}
+
+
+.arena-link {
+    font-size: 2rem;
+    /* font-weight: 500; */
+}
+    
+    
     #controls {
         flex-direction: row;
         justify-content: center;
