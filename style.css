@@ -438,6 +438,19 @@ button {
     padding-block-end: 2rem;
 }
 
+/* I wanted to add a wiggle animation when hover to the blocks */
+/* I pulled this code from claude.ai */
+/* Here the code is using keyframes to tell how the blocks are animated, by rotating from 0deg to 1.5deg. Then add hover in with a 0.3s of wiggle so the blocks wiggle gently */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-1.5deg); }
+    75% { transform: rotate(1.5deg); }
+}
+
+.image-block:hover, .video-block:hover, .text-block:hover, .link-block:hover {
+    animation: wiggle 0.3s ease-in-out infinite;
+}
+
 #channel-blocks {
 
     &.show-images {
