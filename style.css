@@ -422,10 +422,13 @@ button {
 /* Styling the links button id */
 #controls {
 	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+	/* flex-direction: column; */
+    /* changed menu idea to hortizonal, row for mobile size for now */
+    flex-direction: row;
+	gap: 1.5rem;
 	padding: 0;
 	align-items: center;
+    justify-content: center;
 }
 
 /* Styling the links buttons inside the id */
@@ -433,9 +436,12 @@ button {
 	background: transparent;
 	color: #fff;
     font-family:"Courier Prime", monospace;
-    font-size: 1.3rem;
+    font-size: 1rem;
 	border: none;
-    padding-block-end: 2rem;
+    /* padding-block-end: 2rem; */
+    /* changed menu idea to hortizonal, row for mobile size for now, put padding to 0 so I can adjust the controls menu gap */
+     padding-block-end: 0rem;
+     padding: 0rem;
 }
 
 /* I wanted to add a wiggle animation when hover to the blocks */
@@ -642,4 +648,5 @@ footer p {
     gap: 10rem;
     }
 }
+
 

@@ -39,3 +39,4 @@ showLinksButton.addEventListener('click', () => {
     channelBlocks.classList.remove('show-text')
     channelBlocks.classList.add('show-links')
 })
+

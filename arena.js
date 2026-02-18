@@ -70,6 +70,7 @@ let renderBlock = (blockData) => {
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
 
+
 	// Text!
 	else if (blockData.type == 'Text') {
         console.log(blockData)
@@ -233,3 +234,4 @@ fetchJson(`https://api.are.na/v3/channels/${channelSlug}/contents?per=100&sort=p
 		renderBlock(blockData) // Pass the single block’s data to the render function.
 	})
 })
+
