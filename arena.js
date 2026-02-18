@@ -39,7 +39,7 @@ let renderBlock = (blockData) => {
 		let linkItem = 
 			`
 			<li class="link-block"><a href="${ blockData.source.url }">
-				<h2>${blockData.title}</h2>
+			   <!--	<h2>${blockData.title}</h2> this is comment -->
 				<picture>
 					<source media="(max-width: 428px)" srcset="${ blockData.image.square.src }">
 					<source media="(max-width: 640px)" srcset="${ blockData.image.large.src }">
@@ -62,7 +62,7 @@ let renderBlock = (blockData) => {
         let imageItem = 
 			`
 			<li class="image-block">
-				<h2>${blockData.title}</h2>
+				<!--<h2>${blockData.title}</h2> - this is comment -->
     			<img src="${blockData.image.medium.src_2x}">
 			</li>
 			`
@@ -142,7 +142,7 @@ let renderBlock = (blockData) => {
 			let linkedVideoItem =
 				`
 				<li class="video-block">
-					<h2>${blockData.title}</h2>
+				  <!--<h2>${blockData.title}</h2> - this is comment -->
 					${ blockData.embed.html }
 				</li>
 				`
