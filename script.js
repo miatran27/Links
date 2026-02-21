@@ -60,7 +60,7 @@ function toggleQuote(btn) {
 
 
 // I want to add "back to top" button as user scrolls through the channel blocks
-// I got this idea from a friend and Claude.ai 
+// I pulled the code from what we learned in class but also used Claude.ai to apply to this specific case
 // Here I'm defining what each element is and giving it a function to each action
 
 let backToTop = document.querySelector('.back-to-top')
@@ -72,7 +72,7 @@ window.addEventListener('scroll', () => {
     } 
 
     //the line above means if the user has scrolled down far enough to reach where the channel blocks section starts, add the 'visible' class, which triggers the CSS to show the button.
-    //"backToTop.classList" means calling the class list that belongs to the "back-to-top" button
+    //"backToTop.classList" means calling the class list that belongs within the "back-to-top" button
     
     else {
         backToTop.classList.remove('visible')

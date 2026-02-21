@@ -122,7 +122,7 @@ h1 {
     font-size: 0.90rem;
 }
 .arena-link-container a {
-    color: black;
+    color: #F1B100;
 }
 
 .hero .boarding-button {
@@ -148,7 +148,7 @@ h1 {
     font-size: 2rem;
     padding: 0.5rem;
     font-size: 2rem;
-    background: #F1B100;
+    /* background: #F1B100; */
     width: fit-content; /* makes it only as wide as the content */
     margin-inline-start: 1rem;/* shifts the whole box to the right */
     transition: background 0.3s ease; 
@@ -156,6 +156,17 @@ h1 {
 
 .hero .arena-link-container:hover {
     background: #00C951;
+}
+
+/* @keyframes neon-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+} */
+
+.boarding-button p {
+    color: #00C951;
+    /* animation: neon-blink 4s ease-in-out infinite;  */
+    text-shadow: 0 0 8px #00C951;
 }
 
 .hero .destinations {
@@ -201,28 +212,31 @@ h1 {
     left: 50%;
     bottom: 2rem;
     transform: translateX(-50%);
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     cursor: pointer;
     z-index: 3;
+    background: #F1B100; /* add this */
+    border-radius: 50%; /* makes it circular */
+     animation: scroll-bounce 1.4s ease-in-out infinite;
 }
 
 .scrollicon {
     width: 1.25rem;
     height: 1.25rem;
-    border-left: 3px solid white;
-    border-bottom: 3px solid white;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
     transform: rotate(-45deg);
-    animation: scroll-bounce 1.4s ease-in-out infinite;
+    margin-top: -0.4rem;
 }
 
 @keyframes scroll-bounce {
-    0%, 100% { transform: translateY(0) rotate(-45deg); }
-    50% { transform: translateY(6px) rotate(-45deg); }
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
 }
 
 .content {
