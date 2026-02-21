@@ -276,15 +276,38 @@ blockquote {
     padding: 2rem; /* adds breathing room */
 }
 
-.quote, .quoteauthor {
+.quote {
     font-size: 1.2rem;
     color: black;
     font-family: "Inconsolata", monospace;
+    margin-bottom: 1rem;
 }
 
-.quoteauthor {
-    padding-block-start: 1rem;
+.quote-more {
+    display: none; /* hidden by default on mobile */
 }
+
+.read-more-button {
+    background: none;
+    border: none;
+    color: #555;
+    font-family: "Courier Prime", monospace;
+    font-size: 0.85rem;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+/* .quote, .quoteauthor {
+    font-size: 1.2rem;
+    color: black;
+    font-family: "Inconsolata", monospace;
+} */
+
+/* .quoteauthor {
+    padding-block-start: 1rem;
+} */
 
 
 /* Gallery links: horizontal, centered, no background */
@@ -474,6 +497,7 @@ button {
     height: 230px; /* how tall the fade is */
     background:  linear-gradient(to right, transparent, white);
 }
+/* Got this idea from a friend to make the text blocks prettier in the "All" section */
 /* In the code above, I'm adding a white gradient to hide where the text gets cut off, so the blocks look better and more intentional after I cut the block size ratio only in teh "All" section. */
 
 /* Styling the links button id */
@@ -698,6 +722,14 @@ footer p {
 .quote, .quoteauthor {
     font-size: 1.3rem;
 }
+
+.quote-more {
+        display: block;
+    }
+
+.read-more-button {
+        display: none;
+    }
 
 #controls {
     flex-direction: row;
