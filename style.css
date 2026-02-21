@@ -237,7 +237,7 @@ h1 {
         position: relative;
         min-height: 100vh;
         padding: 1.5rem 1rem 3rem;
-        overflow: hidden;
+        overflow: clip;
     }
 
     .channel-blocks-section-background {
@@ -253,7 +253,6 @@ h1 {
 
 /* Making all the content in the chennel blocks section stay on top of the background video */
     .channel-blocks-section #channel-description,
-    .channel-blocks-section #controls,
     .channel-blocks-section #channel-blocks {
         position: relative;
         z-index: 1;
@@ -501,7 +500,12 @@ button {
 	padding: 0;
 	align-items: center;
     justify-content: center;
-    padding-block-end: 3rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: black;
 }
 
 /* Styling the links buttons inside the id */
