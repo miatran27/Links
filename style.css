@@ -278,6 +278,7 @@ blockquote {
 
 .quote {
     font-size: 1.2rem;
+    line-height: 1.3rem;
     color: black;
     font-family: "Inconsolata", monospace;
     margin-bottom: 1rem;
@@ -292,22 +293,12 @@ blockquote {
     border: none;
     color: #555;
     font-family: "Courier Prime", monospace;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     padding: 0;
     cursor: pointer;
     text-decoration: underline;
     margin-top: 0.5rem;
 }
-
-/* .quote, .quoteauthor {
-    font-size: 1.2rem;
-    color: black;
-    font-family: "Inconsolata", monospace;
-} */
-
-/* .quoteauthor {
-    padding-block-start: 1rem;
-} */
 
 
 /* Gallery links: horizontal, centered, no background */
@@ -385,14 +376,14 @@ blockquote {
     border-radius: 8px;
 }
 
-.imagetitle {
+/* .imagetitle {
     font-family: "Klima";
     font-size: 0.95rem;
     font-weight: 500;
     color: #1a1a1a;
     margin-top: 0.5rem;
     text-align: center;
-}
+} */
 
 
 /* Styling the gallery buttons */
@@ -719,7 +710,7 @@ footer p {
     font-size: 2rem;
 }
 
-.quote, .quoteauthor {
+.quote {
     font-size: 1.3rem;
 }
 
