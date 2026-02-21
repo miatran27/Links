@@ -458,6 +458,23 @@ button {
 }
 
 
+#channel-blocks:not(.show-images):not(.show-videos):not(.show-links):not(.show-text) .text-block {
+    aspect-ratio: 1 / 1.3;
+    overflow: hidden;
+    position: relative;
+}
+/* The code above is to have all the text blocks displayed in similar size to the other blcoks only in the "All" section, once filtered, full text content in each block will be displayed */
+
+#channel-blocks:not(.show-images):not(.show-videos):not(.show-links):not(.show-text) .text-block::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 230px; /* how tall the fade is */
+    background:  linear-gradient(to right, transparent, white);
+}
+/* In the code above, I'm adding a white gradient to hide where the text gets cut off, so the blocks look better and more intentional after I cut the block size ratio only in teh "All" section. */
 
 /* Styling the links button id */
 #controls {
