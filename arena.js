@@ -78,7 +78,7 @@ let renderBlock = (blockData) => {
         let textItem =
             `
             <li class="text-block">
-             	<h2>${blockData.title}</h2>
+             	<h2>${blockData.title}</h2> 
 				<p>${blockData.content.html}</p>
             </li>
             `
