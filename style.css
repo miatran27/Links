@@ -22,10 +22,7 @@ h1 {
 	max-width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	/* gap: var(--gap); */
 	justify-content: center;
-
-	/* padding-top: 9px; */
 }
 
 
@@ -34,7 +31,6 @@ h1 {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    /* background: black; */
     display: grid;
     grid-template-areas:
         "header header"
@@ -133,9 +129,6 @@ h1 {
     justify-content: flex-start;
 }
 
-.boarding-button p {
-    color: #00C951;
-}
 
 .boarding-button p, .subheader p, .arena-link-container a, .destinations-column ul, .status-column ul, .destinations ul, .status ul {
     font-family: "Courier Prime", monospace;
@@ -160,15 +153,15 @@ h1 {
     color: black;
 }
 
-/* @keyframes neon-blink {
+@keyframes blink {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-} */
+    50% { opacity: 0.5; }
+}
 
 .boarding-button p {
     color: #00C951;
-    /* animation: neon-blink 4s ease-in-out infinite;  */
     text-shadow: 0 0 8px #00C951;
+    animation: blink 2s ease-in-out infinite;
 }
 
 .hero .destinations {
@@ -194,10 +187,6 @@ h1 {
 
 
 .arena-link {
-    /* position: absolute;
-    top: 1.5rem;
-    right: 1.5rem; */
-    font-family: "Klima", system-ui, sans-serif;
     font-size: 2rem;
     font-weight: 500;
     color: #1a1a1a;
@@ -591,12 +580,12 @@ footer p {
 
 .hero .destinations-column {
     padding: 1rem 3rem;
-    padding-block-start: 8rem;
+    padding-block-start: 4rem;
 }
 
 .hero .status-column {
     padding: 1rem 12rem;
-    padding-block-start: 8rem;
+    padding-block-start: 4rem;
 }
 
 .hero .title h1 {
@@ -607,6 +596,7 @@ footer p {
 
 .hero .subheader {
     display: flex; 
+    font-size: 1.2rem;
     padding: 3rem;
     padding-inline-start: 3rem;
 }
@@ -620,7 +610,6 @@ footer p {
 }
 
 .hero .arena-link-container {
-    font-size: 2rem;
     font-size: 2rem;
     margin-inline-start: 3rem;/* shifts the whole box to the right */
 }
@@ -649,9 +638,6 @@ footer p {
     }
 }
 
-/* .hero .status-column, .hero .boarding-button, .hero .status {
-    padding-inline-start: 12rem;
-} */
 
 @media (min-width: 1280px) {
 
@@ -690,8 +676,11 @@ footer p {
 }
 
 .hero .arena-link-container {
-    font-size: 2rem;
     margin-inline-start: 6rem;/* shifts the whole box to the right */
+}
+
+.arena-link {
+    font-size: 2rem;
 }
 
 .hero .destinations {
@@ -707,10 +696,6 @@ footer p {
 
 .hero .destinations, .hero .status {
     gap: 1.5rem;
-}
-
-.arena-link {
-    font-size: 2rem;
 }
 
 .quote {
