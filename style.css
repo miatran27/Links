@@ -568,6 +568,11 @@ footer p {
 
 
 
+#controls button.active {
+    text-decoration: underline;
+}
+
+
 
 @media (min-width: 768px) {
 
@@ -714,6 +719,26 @@ footer p {
     flex-wrap: wrap;
     gap: 10rem;
     }
+
+#controls button {
+    font-size: 1.2rem;
+}
+
+#controls button:hover {
+    color: #F1B100;
+    transition: 0.3s ease; 
+}
+
 }
 
 
+.image-block, .video-block, .text-block, .link-block {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-block.visible, .video-block.visible, .text-block.visible, .link-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

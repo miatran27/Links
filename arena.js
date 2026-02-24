@@ -19,6 +19,21 @@ let placeChannelInfo = (channelData) => {
 }
 
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible')}
+
+		else {
+			entry.target.classList.remove('visible')
+		}
+	
+	});
+		}, 
+		{ threshold: 0.1 }); //  triggers when 10% of the block is visible
+		// Claude.ai helped me added this op top of the code I put in above so I can control how fast i want the blocks to show up
+
+
 
 // Then our big function for specific-block-type rendering:
 let renderBlock = (blockData) => {
@@ -51,6 +66,9 @@ let renderBlock = (blockData) => {
 		// And puts it into the page!
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 
+		observer.observe(channelBlocks.lastElementChild) // Since each block is created one at a time from the Arena API, I need to point the observer at each new block right after it is added to the page so it can watch for when it scrolls into view and trigger the fade-in animation.
+		// Pulled the above from Claude.ai
+
 		// More on template literals:
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 	}
@@ -68,6 +86,9 @@ let renderBlock = (blockData) => {
 			`
 
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
+
+		observer.observe(channelBlocks.lastElementChild) // Since each block is created one at a time from the Arena API, I need to point the observer at each new block right after it is added to the page so it can watch for when it scrolls into view and trigger the fade-in animation.
+		// Pulled the above from Claude.ai
 	}
 
 
@@ -84,7 +105,8 @@ let renderBlock = (blockData) => {
             `
         channelBlocks.insertAdjacentHTML('beforeend', textItem)
 
-
+		observer.observe(channelBlocks.lastElementChild) // Since each block is created one at a time from the Arena API, I need to point the observer at each new block right after it is added to the page so it can watch for when it scrolls into view and trigger the fade-in animation.
+		// Pulled the above from Claude.ai
 	}
 
 	// Uploaded (not linked) media…
@@ -149,6 +171,9 @@ let renderBlock = (blockData) => {
 				`
 
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+
+			observer.observe(channelBlocks.lastElementChild)  // Since each block is created one at a time from the Arena API, I need to point the observer at each new block right after it is added to the page so it can watch for when it scrolls into view and trigger the fade-in animation.
+			// Pulled the above from Claude.ai
 
 			// More on `iframe`:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
