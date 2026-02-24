@@ -22,10 +22,10 @@ h1 {
 	max-width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	gap: var(--gap);
+	/* gap: var(--gap); */
 	justify-content: center;
 
-	padding-top: 9px;
+	/* padding-top: 9px; */
 }
 
 
@@ -147,8 +147,6 @@ h1 {
     padding: 1rem;
     font-size: 2rem;
     padding: 0.5rem;
-    font-size: 2rem;
-    /* background: #F1B100; */
     width: fit-content; /* makes it only as wide as the content */
     margin-inline-start: 1rem;/* shifts the whole box to the right */
     transition: background 0.3s ease; 
@@ -156,6 +154,10 @@ h1 {
 
 .hero .arena-link-container:hover {
     background: #00C951;
+}
+
+.hero .arena-link-container:hover a {
+    color: black;
 }
 
 /* @keyframes neon-blink {
@@ -240,7 +242,6 @@ h1 {
 }
 
 .content {
-    /* min-height: 100vh; */
     padding: 3rem 2rem;
     background: white;
 }
@@ -358,7 +359,6 @@ button {
 	background-color: white;
     display: flex;
     flex-wrap: wrap;
-    /* border: 1px solid #999; */
     border-radius: 4px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -465,10 +465,8 @@ button {
     font-family:"Courier Prime", monospace;
     font-size: 1rem;
 	border: none;
-    /* padding-block-end: 2rem; */
-    /* changed menu idea to hortizonal, row for mobile size for now, put padding to 0 so I can adjust the controls menu gap */
-     padding-block-end: 0rem;
-     padding: 0rem;
+    padding-block-end: 0rem;
+    padding: 0rem;
 }
 
 /* I wanted to add a wiggle animation when hover to the blocks */
