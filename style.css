@@ -314,62 +314,6 @@ blockquote {
 }
 
 
-/* Gallery links: horizontal, centered, no background */
-/* .gallerylinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.gallerylinks a {
-    display: block;
-    flex: 0 0 auto;
-    color: #1a1a1a;
-    font-family: "Klima";
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: opacity 0.2s ease;
-} */
-
-/* .gallerylinks a:hover {
-    opacity: 0.7;
-} */
-
-/* Galleries: hidden until targeted */
-/* .gallery {
-    display: none;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    background: #fff;
-    border-top: 1px solid #eee;
-}
-
-.gallery:target {
-    display: block;
-}
-
-.gallerytitle {
-    font-family: "Klima";
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #1a1a1a;
-    text-align: center;
-} */
-
-/* Mobile: images stacked */
-/* .gallerygrid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-} */
 
 .image {
     display: flex;
@@ -389,14 +333,6 @@ blockquote {
     border-radius: 8px;
 }
 
-/* .imagetitle {
-    font-family: "Klima";
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #1a1a1a;
-    margin-top: 0.5rem;
-    text-align: center;
-} */
 
 
 /* Styling the gallery buttons */
@@ -631,10 +567,6 @@ footer p {
 .back-to-top-arrow {
     font-size: 1.2rem;
 }
-
-
-
-
 
 
 
