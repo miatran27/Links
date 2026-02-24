@@ -88,7 +88,7 @@ let renderBlock = (blockData) => {
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 
 		observer.observe(channelBlocks.lastElementChild) // Since each block is created one at a time from the Arena API, I need to point the observer at each new block right after it is added to the page so it can watch for when it scrolls into view and trigger the fade-in animation.
-		// Pulled the above from Claude.ai
+		// Tried to implement the code from class but had to fix it using Claude.ai
 	}
 
 
@@ -106,7 +106,7 @@ let renderBlock = (blockData) => {
         channelBlocks.insertAdjacentHTML('beforeend', textItem)
 
 		observer.observe(channelBlocks.lastElementChild) // Since each block is created one at a time from the Arena API, I need to point the observer at each new block right after it is added to the page so it can watch for when it scrolls into view and trigger the fade-in animation.
-		// Pulled the above from Claude.ai
+		// Tried to implement the code from class but and fixed it using Claude.ai
 	}
 
 	// Uploaded (not linked) media…
@@ -173,7 +173,7 @@ let renderBlock = (blockData) => {
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 
 			observer.observe(channelBlocks.lastElementChild)  // Since each block is created one at a time from the Arena API, I need to point the observer at each new block right after it is added to the page so it can watch for when it scrolls into view and trigger the fade-in animation.
-			// Pulled the above from Claude.ai
+			// Tried to implement the code from class but and fixed it using Claude.ai
 
 			// More on `iframe`:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe

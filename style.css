@@ -292,9 +292,10 @@ blockquote {
 
 .quote {
     font-size: 1.2rem;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     color: black;
-    font-family: "Inconsolata", monospace;
+    /* font-family: "Inconsolata", monospace; */
+    font-family: "Barlow", sans-serif;
     margin-bottom: 1rem;
 }
 
@@ -305,8 +306,8 @@ blockquote {
 .read-more-button {
     background: none;
     border: none;
-    color: #555;
-    font-family: "Courier Prime", monospace;
+    color: #828282;
+    font-family: "Barlow", sans-serif;
     font-size: 1.2rem;
     padding: 0;
     cursor: pointer;
@@ -437,7 +438,7 @@ button {
     height: 230px; /* how tall the fade is */
     background:  linear-gradient(to right, transparent, white);
 }
-/* Got this idea from a friend to make the text blocks prettier in the "All" section */
+/* Got this idea from a friend to make the text blocks look nicer in the "All" section */
 /* In the code above, I'm adding a white gradient to hide where the text gets cut off, so the blocks look better and more intentional after I cut the block size ratio only in teh "All" section. */
 
 /* Styling the links button id */
@@ -462,8 +463,9 @@ button {
 #controls button {
 	background: transparent;
 	color: #fff;
-    font-family:"Courier Prime", monospace;
-    font-size: 1rem;
+    font-family: "Inconsolata", monospace;
+    font-weight: 500;
+    font-size: 1.1rem;
 	border: none;
     padding-block-end: 0rem;
     padding: 0rem;
@@ -540,7 +542,7 @@ footer p {
     right: 2rem;
     background: black;
     color: white;
-    font-family: "Courier Prime", monospace;
+    font-family: "Inconsolata", monospace;
     font-size: 0.85rem;
     text-decoration: none;
     padding: 0.75rem 1rem;
@@ -572,6 +574,17 @@ footer p {
     text-decoration: underline;
 }
 
+/* Adding the style for the scroll animation */
+.image-block, .video-block, .text-block, .link-block {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-block.visible, .video-block.visible, .text-block.visible, .link-block.visible {
+    opacity: 1;  /* When JS triggers the 'visible' class, the blocks becomes fully visible */
+    transform: translateY(0); /* Blocks slide back up to its normal position */
+}
 
 
 @media (min-width: 768px) {
@@ -589,7 +602,6 @@ footer p {
 .hero .title h1 {
     font-weight: 700;
     font-size: 4rem;
-    /* padding: 1rem; */
     padding-inline-start: 3rem;
 }
 
@@ -729,16 +741,4 @@ footer p {
     transition: 0.3s ease; 
 }
 
-}
-
-
-.image-block, .video-block, .text-block, .link-block {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.image-block.visible, .video-block.visible, .text-block.visible, .link-block.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
