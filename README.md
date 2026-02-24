@@ -1,0 +1,9 @@
+Project topic:
+Working on this project gave me a foundational understanding of what an API is and how it works in practice. By pulling content directly from Are.na's API, I learned how data can be fetched from an external source and rendered dynamically onto a webpage without having to manually copy each block one by one. This also helped me understand on a more technical level how LLM platforms like ChatGPT retrieve and serve information to users.
+
+Things I want to improve:
+1. I tried to apply the CRY system in the overall structure of my CSS. But I'd say I wasn't very good at nesting the small details like font size, color, etc. Early in the process I added font sizes and colors inconsistently without cleaning them up, which made the code harder to manage over time. Going forward I should do a better job at defining CSS variables in the :root at the very beginning, so that values like colors, font sizes, and spacing are all stored in one place and easy to reference and update throughout the stylesheet.
+
+2. For future improvements, I want to continue adding small JS features that improve the reading experience for users, for example a 'Read More' button to expand long text blocks, and a 'Back to Top' button for easier navigation when scrolling through a lot of content. Potentially, I also want to play with something a bit more out of comfort zone if there's time to make the web page a bit more fun.
+
+3. This was my first time coding in JS, and adding comments throughout the process really helped me understand what each line and function was doing. I want to keep this habit going in future projects so I can always look back at my own notes and not get lost in my own code.
