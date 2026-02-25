@@ -410,6 +410,10 @@ button {
     color: #757575; /* slightly dimmer for the author */
 }
 
+.text-block h2, .text-block p {
+    font-family: "Libre Baskerville", serif;
+}
+
 
 #channel-blocks:not(.show-images):not(.show-videos):not(.show-links):not(.show-text) .text-block {
     aspect-ratio: 1 / 1.3;
